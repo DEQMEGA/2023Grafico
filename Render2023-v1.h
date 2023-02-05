@@ -88,7 +88,7 @@ void CrearScreen( const unsigned int ancho, const unsigned int alto ){
     ShowWindow(RMEGA.Window_,SW_SHOW);
 }
 
-void(*__FUNC_LOOP__)(unsigned int*,int) = NULL;
+void(*__FUNC_LOOP__)(register unsigned int*,int) = NULL;
 
 void StartLoop(){
     BITMAPINFO BitmapInfo_;
