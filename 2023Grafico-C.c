@@ -1,4 +1,3 @@
-
 #include "Render2023-v1.h"
 const unsigned int COLOR_A = 0xff282814;
 const unsigned int COLOR_B = 0xff505028;
@@ -22,7 +21,7 @@ static const int fastSin(int i){
 }
 
 
-void Bucle( register unsigned int *BufferVideo, int DeltaTime ){
+void Bucle( register unsigned int *BufferVideo, int Fps, int DeltaTime ){
 	int x,y,xx,yy, xo,yo;
 	xo = ( 32 * fastSin( 4 * (ROT>>1) ) >> 8 ) + 50;
 	yo = ( 32 * fastSin( 5 * (ROT>>1) ) >> 8 ) + 50;
@@ -34,7 +33,7 @@ void Bucle( register unsigned int *BufferVideo, int DeltaTime ){
 		}
 	}
 	if(ROT>=360) ROT=0;
-	ROT++;
+	ROT+=5;
 }
 
 
